@@ -1,10 +1,18 @@
 import "./index.css";
-import { MyComposition } from "./Composition";
+import { Composition } from "remotion";
+import { HistoryAdVideo } from "./HistoryAd";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      <MyComposition />
+      <Composition
+        id="HistoryAd"
+        component={HistoryAdVideo}
+        durationInFrames={660}
+        fps={30}
+        width={1280}
+        height={720}
+      />
     </>
   );
 };
